@@ -2,10 +2,31 @@
 //
 
 #include <iostream>
+using namespace std;
+
+void sumElements() {
+    const int s = 6;
+    int nums[s] = { 1, 2, 3, 4, 5, 6 };
+    int t = 0;
+
+    for (int i = 0; i < s; i++) {
+        cout << nums[i] << endl;
+    }
+
+    for (int i = 0; i < s; i++) {
+        t += nums[i];
+        nums[i] = t;
+        cout << nums[i] << endl;
+    }
+
+    for (int i = 0; i < s; i++) {
+        cout << nums[i] << endl;
+    }
+}
 
 int main()
 {
-    std::cout << "Hello World!\n";
+    sumElements();
 }
 
 // Запуск программы: CTRL+F5 или меню "Отладка" > "Запуск без отладки"
