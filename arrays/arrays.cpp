@@ -6,26 +6,37 @@ using namespace std;
 
 void sumElements() {
     const int s = 6;
-    int nums[s] = { 1, 2, 3, 4, 5, 6 };
+    int nums[s];
     int t = 0;
+    cout << "Введите числа для массива: " << endl;
+
+
+    for(int i =0; i<s; i++)
+    { 
+        cin >> nums[i];
+    }
+    
 
     for (int i = 0; i < s; i++) {
-        cout << nums[i] << endl;
+        cout << nums[i] << "  ";
     }
+    cout << endl;
 
     for (int i = 0; i < s; i++) {
         t += nums[i];
         nums[i] = t;
-        cout << nums[i] << endl;
+        //cout << nums[i] << endl;
     }
 
     for (int i = 0; i < s; i++) {
-        cout << nums[i] << endl;
+        cout << nums[i] << "  ";
     }
+    cout << endl;
 }
 
 int main()
 {
+    setlocale(LC_ALL, "ru");
     sumElements();
 }
 
