@@ -25,7 +25,6 @@ void sumElements() {
     for (int i = 0; i < s; i++) {
         t += nums[i];
         nums[i] = t;
-        //cout << nums[i] << endl;
     }
 
     for (int i = 0; i < s; i++) {
