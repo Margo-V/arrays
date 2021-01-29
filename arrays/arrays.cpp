@@ -33,10 +33,45 @@ void sumElements() {
     cout << endl;
 }
 
+void monotonicArray() {
+
+    const int s = 5;
+    int nums[s];
+    bool res;
+    cout << "Введите числа для массива: " << endl;
+    for (int i = 0; i < s; i++)
+    {
+        cin >> nums[i];
+    }
+
+    for (int i = 0; i < s-1; i++) {
+        
+        if ((nums[i] - nums[i+1] == -1) || (nums[i] == nums[i+1])) {
+            res = true;         
+        }
+        else {
+            res = false;
+        }
+    }
+    cout << endl;
+
+    for (int i = 0; i < s; i++) {
+        cout << nums[i] << "  ";
+    }
+
+    if (res == 1) {
+        cout << "true" << endl;
+    }
+    else if (res == 0) {
+        cout << "false" << endl;
+    }
+
+}
+
 int main()
 {
     setlocale(LC_ALL, "ru");
-    sumElements();
+    monotonicArray();
 }
 
 // Запуск программы: CTRL+F5 или меню "Отладка" > "Запуск без отладки"
